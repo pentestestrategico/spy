@@ -1,0 +1,131 @@
+/* ===== BODY ===== */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0; /* Remove margem padrão para evitar espaços indesejados */
+}
+
+/* ===== HEADER ===== */
+header {
+  background-color: black;
+  color: lime;
+  padding: 10px 20px;
+  display: flex; /* Usa flexbox para layout horizontal */
+  align-items: center; /* Centraliza verticalmente o conteúdo do header */
+  justify-content: space-between; /* Espaça os itens entre as extremidades */
+  border-radius: 15px; /* Bordas arredondadas do header */
+  box-shadow: 0 8px 15px rgba(0, 255, 0, 0.6); /* Sombra verde suave */
+  margin-left: 0; /* Remove margem esquerda, redundante pois 0 é padrão */
+}
+
+/* ===== MENU ===== */
+.menu {
+  display: flex; /* Layout flex horizontal */
+  align-items: center; /* Centraliza verticalmente logo e menu */
+  justify-content: flex-start; /* Alinha todos os itens à esquerda */
+  gap: 20px; /* Espaço fixo entre o logo e o menu */
+  width: 100%; /* Ocupa toda a largura disponível */
+  padding: 0 20px; /* Espaçamento interno nas laterais */
+  box-sizing: border-box; /* Padding faz parte do tamanho total */
+}
+
+/* Logo */
+.logo {
+  display: flex; /* Flex para alinhar conteúdos internos, se tiver */
+  align-items: center; /* Centraliza verticalmente o conteúdo do logo */
+  gap: 10px; /* Espaço entre elementos dentro do logo, ex: ícone + texto */
+  flex: 0 0 auto; /* Tamanho fixo, não cresce ou encolhe */
+}
+
+/* Estilo do título do logo */
+.logo h1 {
+  color: lime;
+  margin: 0; /* Remove margem padrão do h1 */
+  font-weight: 900;
+  font-size: 2.5rem;
+  background: linear-gradient(45deg, #aaff00, #00ff99, #00ffaa, #aaff00);
+  background-size: 200% 200%;
+  -webkit-background-clip: text; /* Clipa o gradiente no texto */
+  -webkit-text-fill-color: transparent; /* Torna o texto transparente para mostrar o gradiente */
+  animation: gradientMove 4s ease infinite; /* Animação do gradiente */
+  text-shadow: 0 0 8px rgba(0, 255, 128, 0.6), 0 0 20px rgba(0, 255, 128, 0.3);
+}
+
+/* Animação do gradiente do logo */
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Container dos links do menu */
+.menu_itens {
+  display: flex; /* Exibe os links lado a lado */
+  gap: 20px; /* Espaçamento entre cada link */
+  /* Sem justify-content, pois o container todo está alinhado à esquerda pelo .menu */
+}
+
+/* Estilo dos links */
+.menu_itens a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 8px 12px; /* Espaço interno para clicar melhor */
+  border-radius: 6px; /* Bordas arredondadas */
+  transition: color 0.3s ease, border-bottom-color 0.3s ease; /* Transições suaves */
+  border-bottom: 2px solid transparent; /* Linha inferior invisível para efeito hover */
+  cursor: pointer;
+}
+
+/* Efeito hover e link ativo */
+.menu_itens a:hover,
+.menu_itens a.active {
+  color: lime;
+  border-bottom-color: lime; /* Linha inferior aparece em verde */
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  position: fixed; /* Fixa o footer na parte inferior da tela */
+  bottom: 0;
+  left: 0;
+  width: 100%; /* Ocupa toda a largura */
+  background-color: black;
+  color: lime;
+  padding: 15px 20px;
+  text-align: center;
+  border-radius: 0 0 15px 15px; /* Bordas arredondadas só em baixo */
+  box-shadow: 0 -4px 15px rgba(0, 255, 0, 0.3);
+  font-weight: bold;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  user-select: none; /* Impede seleção do texto */
+}
+
+/* Texto dentro do footer */
+.footer-content p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* Links do footer */
+.footer a {
+  color: lime;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+/* Hover nos links do footer */
+.footer a:hover {
+  color: #aaffaa;
+  text-decoration: underline;
+  cursor: pointer;
+}
